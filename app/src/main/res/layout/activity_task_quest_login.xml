@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/mensagem_principal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="70dp"
+        android:fontFamily="@font/ubuntu_bold"
+        android:text="Impulsione suas tarefas."
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sub_mensagem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/ubuntu_bold"
+        android:text="Vamos lá!"
+        android:textColor="@color/yellow"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mensagem_principal" />
+
+    <View
+        android:id="@+id/container_components"
+        style="@style/ContainerComponents"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sub_mensagem" />
+
+    <EditText
+        android:id="@+id/email_login"
+        style="@style/EditText"
+        android:hint="Email"
+        app:layout_constraintEnd_toEndOf="@id/container_components"
+        app:layout_constraintStart_toStartOf="@id/container_components"
+        app:layout_constraintTop_toTopOf="@id/container_components"
+        android:singleLine="true"
+        android:inputType="textEmailAddress"
+        android:drawableRight="@drawable/ic_email"
+        />
+
+    <EditText
+        android:id="@+id/password_login"
+        style="@style/EditText"
+        android:hint="Senha"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@id/container_components"
+        app:layout_constraintStart_toStartOf="@id/container_components"
+        app:layout_constraintTop_toBottomOf="@id/email_login"
+        android:singleLine="true"
+        android:drawableRight="@drawable/ic_password"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_login"
+        style="@style/Button"
+        app:layout_constraintEnd_toEndOf="@id/container_components"
+        app:layout_constraintStart_toStartOf="@id/container_components"
+        app:layout_constraintTop_toBottomOf="@id/password_login" />
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/container_components"
+        android:visibility="invisible"
+        />
+
+    <TextView
+        android:id="@+id/bottom_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/ubuntu_bold"
+        android:text="@string/text_cadastro"
+        android:textColor="@color/dark_gray"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/progressbar" />
+
+    <TextView
+        android:id="@+id/text_cadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ubuntu_bold"
+        android:text="@string/text_cadastro_button"
+        android:textColor="@color/yellow"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottom_text_view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

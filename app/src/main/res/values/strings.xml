@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TaskQuest</string>
+    <string name="text_cadastro">Ainda não é cadastrado?</string>
+    <string name="text_cadastro_button">Criar uma conta.</string>
+    <string name="text_main_cadastro_">Faça parte da família.</string>
+    <string name="text_sub_cadastro">É facil!</string>
+</resources>
